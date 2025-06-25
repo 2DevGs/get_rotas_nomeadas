@@ -19,6 +19,12 @@ class HomePage extends StatelessWidget {
               },
               child: Text('Initial'),
             ),
+            ElevatedButton(
+              onPressed: (){
+                Get.offNamed('/pagenotfound');
+              },
+              child: Text('Page not Found'),
+            ),
           ],
         )
       ),
