@@ -17,13 +17,19 @@ class HomePage extends StatelessWidget {
               onPressed: (){
                 Get.offNamed('/initial/page1');
               },
-              child: Text('Initial'),
+              child: const Text('Initial'),
             ),
             ElevatedButton(
               onPressed: (){
                 Get.offNamed('/pagenotfound');
               },
-              child: Text('Page not Found'),
+              child: const Text('Page not Found'),
+            ),
+            ElevatedButton(
+              onPressed: (){
+                Get.offNamed('/sendparameter');
+              },
+              child: const Text('Send Parameters'),
             ),
           ],
         )
