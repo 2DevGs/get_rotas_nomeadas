@@ -37,6 +37,12 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Middlewares'),
             ),
+            ElevatedButton(
+              onPressed: (){
+                Get.offNamed('/nestedNavigation');
+              },
+              child: const Text('Nested Navigation'),
+            ),
           ],
         )
       ),

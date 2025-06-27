@@ -5,6 +5,7 @@ import 'package:get_rotas_nomeadas/pages/initial/page1.dart';
 import 'package:get_rotas_nomeadas/pages/middlewares/access_denied_page.dart';
 import 'package:get_rotas_nomeadas/pages/middlewares/middlewares_home_page.dart';
 import 'package:get_rotas_nomeadas/pages/middlewares/route_middlewares.dart';
+import 'package:get_rotas_nomeadas/pages/nested_navigation/home_nested_navigation.dart';
 import 'package:get_rotas_nomeadas/pages/route_not_found/route_not_found_page.dart';
 import 'package:get_rotas_nomeadas/pages/send_parameters/arguments_params_page.dart';
 import 'package:get_rotas_nomeadas/pages/send_parameters/path_params_page.dart';
@@ -61,6 +62,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/accessDenied', 
           page: () => const AccessDeniedPage(),
+        ),
+        GetPage(
+          name: '/nestedNavigation', 
+          page: () => HomeNestedNavigation(),
         ),
       ],
     );
