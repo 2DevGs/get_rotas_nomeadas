@@ -31,6 +31,12 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Send Parameters'),
             ),
+            ElevatedButton(
+              onPressed: (){
+                Get.offNamed('/middlewares');
+              },
+              child: const Text('Middlewares'),
+            ),
           ],
         )
       ),

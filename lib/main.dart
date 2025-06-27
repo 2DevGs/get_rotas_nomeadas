@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_rotas_nomeadas/pages/home_page.dart';
 import 'package:get_rotas_nomeadas/pages/initial/page1.dart';
+import 'package:get_rotas_nomeadas/pages/middlewares/access_denied_page.dart';
+import 'package:get_rotas_nomeadas/pages/middlewares/middlewares_home_page.dart';
+import 'package:get_rotas_nomeadas/pages/middlewares/route_middlewares.dart';
 import 'package:get_rotas_nomeadas/pages/route_not_found/route_not_found_page.dart';
 import 'package:get_rotas_nomeadas/pages/send_parameters/arguments_params_page.dart';
 import 'package:get_rotas_nomeadas/pages/send_parameters/path_params_page.dart';
@@ -35,6 +38,9 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/initial/page1', 
           page: () => const Page1(),
+          middlewares: [
+            RouteMiddlewares(),
+          ],
         ),
         GetPage(
           name: '/sendparameter', 
@@ -44,6 +50,17 @@ class MyApp extends StatelessWidget {
             GetPage(name: '/pathParam/:nome/jornadaGetX', page: () => const PathParamsPage(),),
             GetPage(name: '/queryParam', page: () => const QueryParamsPage(),),
           ],
+        ),
+        GetPage(
+          name: '/middlewares', 
+          page: () => MiddlewaresHomePage(),
+          middlewares: [
+            RouteMiddlewares(),
+          ],
+        ),
+        GetPage(
+          name: '/accessDenied', 
+          page: () => const AccessDeniedPage(),
         ),
       ],
     );
